@@ -1,0 +1,20 @@
+$bold-font: 'Montserrat', sans-serif;
+$black-color: #363838;
+$paragraph-color: #5A5A5A;
+$line-color: #6D7278;
+
+%title-font {
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+}
+
+%line {
+	background: #6D7278;
+	height: 1px;
+	width: 20rem;
+}
+%line-midpos {
+	left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}

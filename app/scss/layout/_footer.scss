@@ -1,0 +1,109 @@
+@use '../abstracts/variables';
+.footer {
+	background: #DFDFDF;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 10rem;
+		padding: 6rem 0 8rem 0
+	}
+
+	&__info {
+		font-size: 1.6rem;
+	}
+
+	&__info-title {
+		@extend %title-font;
+		font-size: 1.6rem;
+		color: variables.$black-color;
+		line-height: 1.4375;
+		margin-bottom: 1.4rem;
+	}
+
+	&__info-text {
+		max-width: 47.6rem;
+		line-height: 1.6875;
+		color: variables.$paragraph-color;
+		margin-bottom: 1.6rem;
+	}
+
+	&__info-email {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: variables.$black-color;
+		line-height: 1.928;
+		margin-bottom: 2.2rem;
+		display: flex;
+		gap: 1.4rem;
+	}
+
+	&__form {
+		display: flex;
+		gap: .9rem;
+	}
+
+	&__form-input {
+		border: 1px solid #383636;
+		border-radius: 2.1rem;
+		padding: .6rem 0 .6rem 1.8rem;
+		font-size: 1.6rem;
+		background: transparent;
+		flex: 1 1 auto;
+
+		&::placeholder {
+			font-size: 1.6rem;
+			line-height: 1.75;
+			color: #A1A1A1;
+		}
+	}
+
+	&__form-btn {
+		flex: 0 1 16rem;
+		line-height: 1.75;
+		background: variables.$black-color;
+		border-radius: 2.1rem;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5rem;
+	}
+
+	&__social-link {
+		color: #707070;
+		font-size: 1.4rem;
+		line-height: 2;
+		font-weight: 600;
+		display: flex;
+		gap: 1.2rem;
+	}
+
+	&__links {
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5rem;
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2;
+		color: #707070;
+}
+
+	&__copyright {
+		background: variables.$black-color;
+		color: #A1A1A1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 11rem;
+	}
+}
+

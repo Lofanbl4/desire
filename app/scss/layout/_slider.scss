@@ -1,0 +1,110 @@
+@use '../abstracts/variables';
+
+.slider {
+  position: relative;
+}
+
+.slider__container {
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  /* overflow: hidden; */
+	margin-bottom: 1rem;
+}
+
+.slider__items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slider_disable-transition {
+  transition: none;
+}
+
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+}
+
+/* индикаторы */
+
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+	gap: 30px;
+  justify-content: center;
+  list-style: none;
+}
+
+.slider__indicators li {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 8px;
+  height: 8px;
+	border-radius: 50%;
+  text-indent: -999px;
+  background-color: #363838;
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.slider__indicators li.active {
+  background-color: #FFEF35;
+}
+
+.top {
+	padding-bottom: 13.2rem;
+	
+	&__inner {
+		display: flex;
+		justify-content: center;
+		background: url("../images/slider/slider__bg.png") no-repeat top / 100% 722px;
+		overflow: hidden;
+	}
+
+	&__img {
+		margin-right: 1.9rem;
+		margin-left: -10%;
+	}
+
+	&__info {
+		padding-top: 17.4rem;
+		max-width: 64.5rem;
+	}
+
+	&__title {
+		@extend %title-font;
+		font-size: 11rem;
+		line-height: 1.22;
+		color: #363838;
+		margin-bottom: 4.9rem;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: #6D7278;
+			width: 18.5rem;
+			height: 1px;
+			bottom: -2.2rem;
+			left: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 1.6875;
+		color: #5A5A5A;
+		max-width: 58.6rem;
+	}
+}
